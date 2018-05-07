@@ -1,6 +1,9 @@
-﻿public interface ILoginPlatform
+﻿namespace VitonIT.LoginFramework
 {
-    void Init();
-    void SignIn();
-    void SignOut();
+    public interface ILoginPlatform
+    {
+        void Init();
+        void SignIn();
+        void SignOut();
+    }
 }

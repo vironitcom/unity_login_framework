@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public class ProjectSettings : ScriptableObject
+namespace VitonIT.LoginFramework.Demo
 {
-    public static PlatformEnums.Backend SERVER_TYPE;
+    public class ProjectSettings : ScriptableObject
+    {
+        public static PlatformEnums.Backend SERVER_TYPE;
+    }
 }

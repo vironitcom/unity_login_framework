@@ -1,4 +1,7 @@
-﻿public interface ILoginPassPlatform
+﻿namespace VitonIT.LoginFramework
 {
-    void SetLoginPass(string login, string pass);
+    public interface ILoginPassPlatform
+    {
+        void SetLoginPass(string login, string pass);
+    }
 }

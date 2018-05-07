@@ -1,111 +1,115 @@
-﻿public class BaseEvent
+﻿
+namespace VitonIT.LoginFramework
 {
-    public string name;
-
-    public BaseEvent()
+    public class BaseEvent
     {
-        name = this.GetType().Name;
-    }
-}
+        public string name;
 
-public class LoginEvents
-{
-    //Log
-    public class LoginLogEvent : BaseEvent
-    {
-        public string message;
-        public string logType;
-
-        public LoginLogEvent(string mes, string logType = "INF")
+        public BaseEvent()
         {
-            this.message = mes;
-            this.logType = logType;
+            name = this.GetType().Name;
         }
     }
 
-    //Facebbok auth
-    public class FacebookAuthEvent : BaseEvent
+    public class LoginEvents
     {
-        public string accessToken;
-
-        public FacebookAuthEvent(string accessToken)
+        //Log
+        public class LoginLogEvent : BaseEvent
         {
-            this.accessToken = accessToken;
+            public string message;
+            public string logType;
+
+            public LoginLogEvent(string mes, string logType = "INF")
+            {
+                this.message = mes;
+                this.logType = logType;
+            }
         }
-    }
 
-    //Facebook login with credentials
-    public class FacebookCredentialsLoginEvent : BaseEvent {}
-
-    //FacebookLoginErrorEvent 
-    public class FacebookLoginErrorEvent : BaseEvent
-    {
-        public string Error;
-        public string RawResult;
-        public bool Cancelled;
-
-        public FacebookLoginErrorEvent(string error, string rawResult, bool canceled)
+        //Facebbok auth
+        public class FacebookAuthEvent : BaseEvent
         {
-            this.Error = error;
-            this.RawResult = rawResult;
-            this.Cancelled = canceled;
+            public string accessToken;
+
+            public FacebookAuthEvent(string accessToken)
+            {
+                this.accessToken = accessToken;
+            }
         }
-    }
 
-    //User Cancel Login
-    public class FacebookUserCancelLoginEvent : BaseEvent {}
+        //Facebook login with credentials
+        public class FacebookCredentialsLoginEvent : BaseEvent { }
 
-    //Google SignIn login with credentials
-    public class GoogleSignInAuthEvent : BaseEvent
-    {
-        public string idToken;
-
-        public GoogleSignInAuthEvent(string idToken)
+        //FacebookLoginErrorEvent 
+        public class FacebookLoginErrorEvent : BaseEvent
         {
-            this.idToken = idToken;
+            public string Error;
+            public string RawResult;
+            public bool Cancelled;
+
+            public FacebookLoginErrorEvent(string error, string rawResult, bool canceled)
+            {
+                this.Error = error;
+                this.RawResult = rawResult;
+                this.Cancelled = canceled;
+            }
         }
-    }
 
-    //Google log in done credensial
-    public class GoogleSignInCredentialsLoginEvent : BaseEvent {}
+        //User Cancel Login
+        public class FacebookUserCancelLoginEvent : BaseEvent { }
 
-    //Login via login/pass
-    public class LoginViaLoginPassEvent : BaseEvent
-    {
-        public string login;
-        public string pass;
-
-        public LoginViaLoginPassEvent(string login, string pass)
+        //Google SignIn login with credentials
+        public class GoogleSignInAuthEvent : BaseEvent
         {
-            this.login = login;
-            this.pass = pass;
+            public string idToken;
+
+            public GoogleSignInAuthEvent(string idToken)
+            {
+                this.idToken = idToken;
+            }
         }
-    }
 
-    //Login error
-    public class LoginErrorEvent : BaseEvent
-    {
-        public string errorCode;
+        //Google log in done credensial
+        public class GoogleSignInCredentialsLoginEvent : BaseEvent { }
 
-        public LoginErrorEvent(string errCode)
+        //Login via login/pass
+        public class LoginViaLoginPassEvent : BaseEvent
         {
-            this.errorCode = errCode;
+            public string login;
+            public string pass;
+
+            public LoginViaLoginPassEvent(string login, string pass)
+            {
+                this.login = login;
+                this.pass = pass;
+            }
         }
-    }
 
-    //Loading load...
-    public class LoginLoadingEvent : BaseEvent
-    {
-        public bool isLoading;
-
-        public LoginLoadingEvent(bool loading)
+        //Login error
+        public class LoginErrorEvent : BaseEvent
         {
-            this.isLoading = loading;
+            public string errorCode;
+
+            public LoginErrorEvent(string errCode)
+            {
+                this.errorCode = errCode;
+            }
         }
+
+        //Loading load...
+        public class LoginLoadingEvent : BaseEvent
+        {
+            public bool isLoading;
+
+            public LoginLoadingEvent(bool loading)
+            {
+                this.isLoading = loading;
+            }
+        }
+
+        public class LoginSignInDoneEvent : BaseEvent { }
+
+        //user created successfully
+        public class UserCreateDoneEvent : BaseEvent { }
     }
-
-    public class LoginSignInDoneEvent : BaseEvent {}
-
-    //user created successfully
-    public class UserCreateDoneEvent : BaseEvent {}
 }

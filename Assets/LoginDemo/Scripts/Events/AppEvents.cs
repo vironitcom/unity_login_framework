@@ -1,6 +1,9 @@
-﻿public class AppEvents
+﻿namespace VitonIT.LoginFramework.Demo
 {
-    public class OpenRegisterWindowEvent : BaseEvent {}
-    public class RegisterBackEvent: BaseEvent {}
-    public class LogOutEvent : BaseEvent {}
+    public class AppEvents
+    {
+        public class OpenRegisterWindowEvent : BaseEvent {}
+        public class RegisterBackEvent: BaseEvent {}
+        public class LogOutEvent : BaseEvent {}
+    }
 }

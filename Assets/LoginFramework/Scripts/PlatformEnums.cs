@@ -1,17 +1,20 @@
-﻿public class PlatformEnums
+﻿namespace VitonIT.LoginFramework
 {
-    public enum Login
+    public class PlatformEnums
     {
-        Mail,
-        Facebook,
-        GoogleSignin
-    }
+        public enum Login
+        {
+            Mail,
+            Facebook,
+            GoogleSignin
+        }
 
-    public enum Backend
-    {
-        Firebase,
-        Playfab,
-        Gamespark
-    }
+        public enum Backend
+        {
+            Firebase,
+            Playfab,
+            Gamespark
+        }
 
+    }
 }

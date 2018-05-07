@@ -1,22 +1,26 @@
 ﻿using System;
 
-public class LoginUser
+namespace VitonIT.LoginFramework
 {
-    public string DisplayName;
-    public Uri _photoUrl;
-    public string UserId;
-
-    public LoginUser (string name, Uri PhotoUrl, string UserId)
+    public class LoginUser
     {
-        this.DisplayName = name;
-        this._photoUrl = PhotoUrl;
-        this.UserId = UserId;
-    }
+        public string DisplayName;
+        public Uri _photoUrl;
+        public string UserId;
 
-    public Uri PhotoUrl {
-        get
+        public LoginUser(string name, Uri PhotoUrl, string UserId)
         {
-            return _photoUrl;
+            this.DisplayName = name;
+            this._photoUrl = PhotoUrl;
+            this.UserId = UserId;
+        }
+
+        public Uri PhotoUrl
+        {
+            get
+            {
+                return _photoUrl;
+            }
         }
     }
 }
