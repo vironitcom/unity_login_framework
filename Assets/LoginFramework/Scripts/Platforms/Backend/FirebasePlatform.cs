@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace VitonIT.LoginFramework
 {
-    public class FirebasePlatform : IBackerndPlatform
+    public class FirebasePlatform : IBackendPlatform
     {
         private Firebase.Auth.FirebaseAuth auth;
         private FirebaseUser user;

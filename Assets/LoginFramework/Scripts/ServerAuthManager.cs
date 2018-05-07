@@ -19,8 +19,8 @@ namespace VitonIT.LoginFramework
     public class ServerAuthManager : SingletonAsComponent<ServerAuthManager>
     {
         private Dictionary<PlatformEnums.Login, ILoginPlatform> loginDictionary = new Dictionary<PlatformEnums.Login, ILoginPlatform>();
-        private Dictionary<PlatformEnums.Backend, IBackerndPlatform> backendPlatformDictionary = new Dictionary<PlatformEnums.Backend, IBackerndPlatform>();
-        private IBackerndPlatform currentBackend;
+        private Dictionary<PlatformEnums.Backend, IBackendPlatform> backendPlatformDictionary = new Dictionary<PlatformEnums.Backend, IBackendPlatform>();
+        private IBackendPlatform currentBackend;
         private ILoginPlatform currentLoginPlatform;
 
         public static ServerAuthManager Instance
@@ -31,7 +31,7 @@ namespace VitonIT.LoginFramework
 
         public void Init(PlatformEnums.Backend backendName)
         {
-            IBackerndPlatform backerndPlatform = GetServer(backendName);
+            IBackendPlatform backerndPlatform = GetServer(backendName);
             backerndPlatform.Init();
 
             foreach (var tempLoginPlatform in loginDictionary)
@@ -45,14 +45,14 @@ namespace VitonIT.LoginFramework
             loginDictionary.Add(loginName, loginPlatform);
         }
 
-        public void AddBackerndPlatform(PlatformEnums.Backend backendName, IBackerndPlatform backerndPlatform)
+        public void AddBackerndPlatform(PlatformEnums.Backend backendName, IBackendPlatform backerndPlatform)
         {
             backendPlatformDictionary.Add(backendName, backerndPlatform);
         }
 
         public void Login(PlatformEnums.Login loginType, PlatformEnums.Backend backendType)
         {
-            IBackerndPlatform backerndPlatform;
+            IBackendPlatform backerndPlatform;
 
             if (backendPlatformDictionary.TryGetValue(backendType, out backerndPlatform))
             {
@@ -87,9 +87,9 @@ namespace VitonIT.LoginFramework
             return null;
         }
 
-        public IBackerndPlatform GetServer(PlatformEnums.Backend serverType)
+        public IBackendPlatform GetServer(PlatformEnums.Backend serverType)
         {
-            IBackerndPlatform server;
+            IBackendPlatform server;
             if (backendPlatformDictionary.TryGetValue(serverType, out server))
             {
                 return server;

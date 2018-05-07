@@ -14,7 +14,7 @@ WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 namespace VitonIT.LoginFramework
 {
     //Template for GameSpark Platform
-    public class GameSparkPlatform : IBackerndPlatform
+    public class GameSparkPlatform : IBackendPlatform
     {
         public LoginUser GetUser()
         {

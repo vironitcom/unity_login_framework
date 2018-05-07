@@ -18,7 +18,7 @@ using LoginResult = PlayFab.ClientModels.LoginResult;
 
 namespace VitonIT.LoginFramework
 {
-    public class PlayfabPlatform : IBackerndPlatform
+    public class PlayfabPlatform : IBackendPlatform
     {
         public LoginUser GetUser()
         {
