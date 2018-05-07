@@ -1,4 +1,17 @@
-﻿using System.Collections.Generic;
+﻿/***************************** Module Header *****************************\
+Module Name:  ServerAuthManager.cs
+Project:      Vironit Unity3D Login Framework
+Copyright (c) VironIT, http://https://vironit.com
+
+The main class to work with LoginFramework
+
+The MIT License (MIT)
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+\***************************************************************************/
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace VitonIT.LoginFramework

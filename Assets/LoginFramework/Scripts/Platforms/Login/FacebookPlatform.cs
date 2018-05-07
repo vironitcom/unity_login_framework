@@ -1,4 +1,17 @@
-﻿using UnityEngine;
+﻿/***************************** Module Header *****************************\
+Module Name:  FacebookPlatform.cs
+Project:      Vironit Unity3D Login Framework
+Copyright (c) VironIT, http://https://vironit.com
+
+Module for handle Facebook Login API 
+
+The MIT License (MIT)
+
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+\***************************************************************************/
+using UnityEngine;
 using Facebook.Unity;
 using System.Collections.Generic;
 using System;
