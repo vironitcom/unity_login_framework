@@ -45,7 +45,7 @@ namespace VitonIT.LoginFramework
             loginDictionary.Add(loginName, loginPlatform);
         }
 
-        public void AddBackerndPlatform(PlatformEnums.Backend backendName, IBackendPlatform backerndPlatform)
+        public void AddBackendPlatform(PlatformEnums.Backend backendName, IBackendPlatform backerndPlatform)
         {
             backendPlatformDictionary.Add(backendName, backerndPlatform);
         }

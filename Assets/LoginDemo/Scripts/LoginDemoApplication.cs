@@ -166,9 +166,9 @@ namespace VitonIT.LoginFramework.Demo
 
         private void InitLogin()
         {
-            ServerAuthManager.Instance.AddBackerndPlatform(PlatformEnums.Backend.Firebase, new FirebasePlatform());
-            ServerAuthManager.Instance.AddBackerndPlatform(PlatformEnums.Backend.Playfab, new PlayfabPlatform());
-            ServerAuthManager.Instance.AddBackerndPlatform(PlatformEnums.Backend.Gamespark, new GameSparkPlatform());
+            ServerAuthManager.Instance.AddBackendPlatform(PlatformEnums.Backend.Firebase, new FirebasePlatform());
+            ServerAuthManager.Instance.AddBackendPlatform(PlatformEnums.Backend.Playfab, new PlayfabPlatform());
+            ServerAuthManager.Instance.AddBackendPlatform(PlatformEnums.Backend.Gamespark, new GameSparkPlatform());
 
             ServerAuthManager.Instance.AddLoginPlatform(PlatformEnums.Login.Facebook, new FacebookPlatform());
             ServerAuthManager.Instance.AddLoginPlatform(PlatformEnums.Login.GoogleSignin, new GoogleSignInPlatform());
