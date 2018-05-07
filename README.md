@@ -45,6 +45,9 @@ Google Sign In
 Facebook
 Mail login (Email/Password)
 
+![Image](https://github.com/vironitcom/unity_login_framework/blob/master/LoginFramework%20Scheme.png)
+
+
 ## How to use
 Clone this repo, after that you should choose the backend service and login system to use. 
 After that configure each one.
