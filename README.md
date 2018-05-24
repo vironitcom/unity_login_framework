@@ -92,6 +92,13 @@ Download: https://code.google.com/archive/p/openssl-for-windows/downloads
 * Click https://developers.facebook.com/docs/unity/downloads to download Facebook SDK
 Select Assets -> Import Package -> Custom Package… select facebook-unity-sdk-7.10.0 plugin to import to this template. Remember uncheck import PlaySerrviceResolver if you already have after import Firebase SDK and Google Sign in SDK or some other Google SDKs
 
+### Google Sign In and others Login methods
+If you want to use "Google Sign In" please import it SDK 
+https://github.com/googlesamples/google-signin-unity
+If no, just delete GoogleSignInPlatform.cs file.
+
+
+
 ### Init application
 So, if you are there you have already import Login framework with demo and all necessary Login and Backend SDKs
 Let's go ahead to setup framework.
